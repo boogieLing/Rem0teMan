@@ -1,0 +1,23 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+.runtime/
+
+r0-work/
+
+r0-review/
+
+# local/private config
+config/servers.yaml
+
+# local archive and work records
+reports/archive/
+reports/README.md
+reports/templates/
+任务执行总结_*.md
+
+# local agent/runtime instructions
+AGENTS.md
+SOP_远端服务器管理与工作归档.md

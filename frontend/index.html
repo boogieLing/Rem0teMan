@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Remote Server Manager</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/favicon.svg" />
+    <link rel="stylesheet" href="/assets/styles.css" />
+  </head>
+  <body>
+    <div class="background"></div>
+
+    <main class="desktop-shell">
+      <section class="app-window">
+        <header class="tabs-container" id="workspace-tabs" aria-label="Workspace Views">
+          <button class="workspace-tab active" data-layout-tab="servers" type="button">Servers</button>
+          <button class="workspace-tab" data-layout-tab="projects" type="button">Projects</button>
+          <button class="workspace-tab" data-layout-tab="activity" type="button">Activity</button>
+        </header>
+
+        <section class="app-body">
+          <aside class="sidebar panel">
+            <div class="sidebar-header">
+              <div>
+                <p id="sidebar-kicker" class="sidebar-kicker">Workspace</p>
+                <h1 id="sidebar-title" class="sidebar-title">Servers</h1>
+                <p id="sidebar-meta" class="sidebar-meta">0 servers</p>
+              </div>
+              <button id="add-server-btn" class="icon-btn ghost-ring" aria-label="Add Server">+</button>
+            </div>
+            <div id="server-list" class="server-list"></div>
+          </aside>
+
+          <section class="main-editor panel">
+            <header class="toolbar">
+              <div class="toolbar-copy">
+                <p class="toolbar-kicker">Remote Server Manager</p>
+                <h2 id="content-title">未选择服务器</h2>
+                <p id="content-subtitle">请选择左侧服务器或项目</p>
+              </div>
+              <div class="toolbar-actions">
+                <button id="save-config-btn" class="btn btn-primary">保存配置</button>
+                <button id="content-test-btn" class="btn btn-secondary btn-pill">测试连接</button>
+              </div>
+            </header>
+
+            <section id="content-body" class="content-body"></section>
+
+            <section id="console-panel" class="console panel-sub collapsed">
+              <div class="section-head">
+                <div>
+                  <p class="console-kicker">Runtime Stream</p>
+                  <h3>执行日志</h3>
+                </div>
+                <div class="inline-actions">
+                  <button id="toggle-console-btn" class="btn btn-text">展开</button>
+                  <button id="clear-console-btn" class="btn btn-text">清空</button>
+                </div>
+              </div>
+              <pre id="console-output"></pre>
+            </section>
+          </section>
+        </section>
+      </section>
+    </main>
+
+    <div id="note-modal" class="note-modal-backdrop hidden" aria-hidden="true">
+      <section class="note-modal panel">
+        <header class="section-head">
+          <h3 id="note-modal-title">服务器 Notes</h3>
+          <button id="note-modal-close-btn" class="btn btn-text">关闭</button>
+        </header>
+        <textarea
+          id="note-modal-input"
+          class="note-modal-input"
+          placeholder="输入该服务器的运维记录、账号说明、变更历史..."
+        ></textarea>
+        <div class="note-modal-actions">
+          <button id="note-modal-save-btn" class="btn btn-primary">保存 Notes</button>
+        </div>
+      </section>
+    </div>
+
+    <script src="/assets/app.js" defer></script>
+  </body>
+</html>
