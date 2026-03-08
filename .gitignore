@@ -21,3 +21,5 @@ reports/templates/
 # local agent/runtime instructions
 AGENTS.md
 SOP_远端服务器管理与工作归档.md
+
+r0-submit/

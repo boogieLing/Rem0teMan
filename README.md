@@ -251,8 +251,6 @@ Rem0teMan/
 
 本项目采用 [MIT License](./LICENSE) 开源。
 
-README 顶部的 GitHub Stars / Forks badge 为实时数据，直接拉取 `boogieLing/Rem0teMan` 当前仓库状态，无需手工更新。
-
 ## 仓库地址
 
 - GitHub: [boogieLing/Rem0teMan](https://github.com/boogieLing/Rem0teMan)
